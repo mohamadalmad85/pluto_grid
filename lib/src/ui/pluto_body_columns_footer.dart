@@ -111,7 +111,7 @@ class ColumnFooterLayoutDelegate extends MultiChildLayoutDelegate {
         0,
         (previousValue, element) => previousValue += element.width,
       ),
-      stateManager.columnFooterHeight,
+     stateManager.style.columnFilterHeight,
     );
   }
 
@@ -126,7 +126,7 @@ class ColumnFooterLayoutDelegate extends MultiChildLayoutDelegate {
 
       if (hasChild(col.field)) {
         var boxConstraints = BoxConstraints.tight(
-          Size(width, stateManager.columnFooterHeight),
+          Size(width, stateManager.style.columnFilterHeight),
         );
 
         layoutChild(col.field, boxConstraints);
